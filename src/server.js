@@ -1,5 +1,6 @@
 import Express from 'express';
 import { ApolloServer } from 'apollo-server-express';
+import { createServer } from 'http';
 
 class Server {
   constructor(config) {
@@ -15,7 +16,7 @@ class Server {
   setupRouts() {
     const { app } = this;
     app.get('/health-check', (req, res) => {
-      res.send('I am ok');
+      res.send('I am fine');
     });
     return this;
   }
@@ -23,16 +24,23 @@ class Server {
   setupApollo(schema) {
     const { app } = this;
     this.Server = new ApolloServer({
-      ...schema,
+      ...schema
     });
     this.Server.applyMiddleware({ app });
+    this.httpServer = createServer(app);
+    this.Server.installSubscriptionHandlers(this.httpServer);
     this.run();
   }
 
   run() {
     const { config: { port } } = this;
-    const { app } = this;
-    app.listen(port, () => {
+    // const { app } = this;
+    this.httpServer.listen(port, (err) => {
+      if (err) {
+        // eslint-disable-next-line no-console
+        console.log(err);
+      }
+      // eslint-disable-next-line no-console
       console.log(`App is running on port ${port}`);
     });
   }

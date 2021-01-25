@@ -8,7 +8,9 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "graphql": "^15.4.0",
-    "merge-graphql-schemas": "^1.7.8"
+    "http": "0.0.1-security",
+    "merge-graphql-schemas": "^1.7.8",
+    "module": "^1.2.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
