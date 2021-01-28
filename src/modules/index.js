@@ -1,3 +1,4 @@
+
 import { fileLoader, mergeTypes } from 'merge-graphql-schemas';
 import path from 'path';
 import * as user from './user';
