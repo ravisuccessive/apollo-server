@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-
 import userInstance from '../../service/user';
 import pubsub from '../pubsub';
 import constants from '../../libs/constants';

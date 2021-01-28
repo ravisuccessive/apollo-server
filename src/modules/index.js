@@ -1,4 +1,3 @@
-
 import { fileLoader, mergeTypes } from 'merge-graphql-schemas';
 import path from 'path';
 import * as user from './user';
@@ -15,7 +14,8 @@ export default {
       ...trainee.Query
     },
     Mutation: {
-      ...trainee.Mutation
+      ...trainee.Mutation,
+      ...user.Mutation
     },
     Subscription: {
       ...trainee.traineeSubscription

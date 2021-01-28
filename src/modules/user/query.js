@@ -1,9 +1,7 @@
 export default {
-    getMyProfile: () => {
-     return {
-        id: '420',
-        name: 'Ravi Shankar Singh',
-        email: 'ravi.singh@successive.tech',
-      }
-  },
-} 
+  getMyProfile: async (parent, args, context) => {
+    const { dataSources: { userAPI } } = context;
+    const response = await userAPI.getMe();
+    return response.data;
+  }
+};
