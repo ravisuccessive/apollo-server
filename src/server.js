@@ -34,13 +34,10 @@ class Server {
 
   run() {
     const { config: { port } } = this;
-    // const { app } = this;
     this.httpServer.listen(port, (err) => {
       if (err) {
-        // eslint-disable-next-line no-console
         console.log(err);
       }
-      // eslint-disable-next-line no-console
       console.log(`App is running on port ${port}`);
     });
   }
