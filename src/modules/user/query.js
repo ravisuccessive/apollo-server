@@ -1,9 +1,10 @@
 export default {
     getMyProfile: () => {
-     return {
+      const detail={
         id: '420',
-        name: 'Ravi Shankar Singh',
-        email: 'ravi.singh@successive.tech',
-      }
+      name: 'Ravi Shankar Singh',
+      email: 'ravi.singh@successive.tech',
+    }
+     return detail
   },
 } 
