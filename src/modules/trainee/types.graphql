@@ -4,7 +4,9 @@ input CreateUserInput {
     role: String!
 } 
 
-input LoginCredentials{
-    email: String!
-    password: String!
-} 
+input UpdateUserInput {
+    id: ID!, 
+    role: String, 
+    name: String, 
+    email: String
+}
