@@ -1,4 +1,3 @@
-export { default as Query } from './qurey';
+export { default as Query } from './query';
 export { default as Mutation } from './mutation';
-export { default as traineeSubscription } from './subscription';
-
+export { default as subscription } from './subscription';

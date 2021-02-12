@@ -1,7 +1,7 @@
 import Express from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import { createServer } from 'http';
-import { UserAPI, TraineeAPI } from './datasource/index';
+import { UserAPI } from './datasource/index';
 // import TraineeAPI from './modules/trainee/query';
 
 class Server {

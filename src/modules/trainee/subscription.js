@@ -3,13 +3,13 @@ import pubsub from '../pubsub';
 import constants from '../../libs/constants';
 
 export default {
-  traineeAdded: {
+   traineeAdded: {
     subscribe: () => pubsub.asyncIterator([constants.subscriptions.TRAINEE_ADDED])
   },
-  traineeUpdated: {
+   traineeUpdated: {
     subscribe: () => pubsub.asyncIterator([constants.subscriptions.TRAINEE_UPDATED])
   },
-  traineeDeleted: {
+   traineeDeleted: {
     subscribe: () => pubsub.asyncIterator([constants.subscriptions.TRAINEE_DELETED])
   }
 };

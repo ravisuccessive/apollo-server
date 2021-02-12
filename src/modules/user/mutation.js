@@ -3,8 +3,7 @@ export default {
     const { payLoad: { email, password } } = args;
     const { dataSources: { userAPI } } = context;
     const response = await userAPI.loginUser({ email, password });
-    console.log('responseeeee', response);
-    // const res = JSON.stringify(response);
+    console.log(response);
     return response.data;
   }
 };
